@@ -6,7 +6,7 @@
     "users": [
       {
         "_id": "sample_user_id_001",
-        "name": "Sean",
+        "name": "Sample Student",
         "email": "student@example.com",
         "password": "hashed_password_stored_by_bcryptjs",
         "role": "user",

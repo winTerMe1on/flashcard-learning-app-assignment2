@@ -242,11 +242,11 @@ The frontend uses Vite proxy settings to send `/api` requests to the backend.
 This assignment was completed individually.
 
 | Student Name | Student ID | Responsibility |
-|---|---|---|
+| :--- | :--- | :--- |
 | Yu Xue | 25937133 | Designed, implemented, tested, and documented the complete Flashcard Learning App. |
 
 | Area | Work Completed |
-|---|---|
+| :--- | :--- |
 | Project planning | Chose the Flashcard Learning App topic and designed the main workflow, including registration, deck management, flashcard study, learning history, and admin review. |
 | Frontend development | Built the React + Vite single-page application, including login/register pages, dashboard, deck page, flashcard page, learning history page, admin panel, navigation layout, responsive UI, loading states, error messages, and polished styling. |
 | Backend development | Built the Node.js + Express backend API, including authentication routes, deck routes, flashcard routes, learning history routes, middleware, and server configuration. |
