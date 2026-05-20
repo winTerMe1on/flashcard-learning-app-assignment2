@@ -1,13 +1,13 @@
 {
   "project": "Flashcard Learning App",
   "database": "MongoDB Atlas",
-  "description": "This file provides a sample database export for the Flashcard Learning App flashcard learning platform. The real database is hosted on MongoDB Atlas. Sensitive connection information is not included.",
+  "description": "This file provides a sample database export for the Flashcard Learning App. The real database is hosted on MongoDB Atlas. Sensitive connection information is not included.",
   "collections": {
     "users": [
       {
         "_id": "sample_user_id_001",
         "name": "Sean",
-        "email": "seantesting521@gmail.com",
+        "email": "student@example.com",
         "password": "hashed_password_stored_by_bcryptjs",
         "role": "user",
         "createdAt": "2026-05-21T00:00:00.000Z",
@@ -16,7 +16,7 @@
       {
         "_id": "sample_admin_id_001",
         "name": "Admin",
-        "email": "admin@test.com",
+        "email": "admin@example.com",
         "password": "hashed_password_stored_by_bcryptjs",
         "role": "admin",
         "createdAt": "2026-05-21T00:00:00.000Z",

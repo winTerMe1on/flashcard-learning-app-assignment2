@@ -27,15 +27,15 @@ The application uses a React frontend, an Express backend, and MongoDB Atlas for
 
 ## Tech Stack
 
-| Area | Technology |
-| --- | --- |
+| Area | Technology Used |
+| :--- | :--- |
 | Frontend | React + Vite |
 | Styling | CSS |
 | Backend | Node.js + Express |
 | Database | MongoDB Atlas |
 | ODM | Mongoose |
 | Authentication | JWT + bcryptjs |
-| Development tools | Nodemon, Vite |
+| Development tools | Nodemon and Vite |
 
 ## Database Design and Entities
 
@@ -154,7 +154,7 @@ Assignment 2/
 
 Create a `server/.env` file before running the backend.
 
-Use `server/.env.example` as a guide:
+Use `server/.env.example` as a guide. The values below are examples only:
 
 ```env
 PORT=5000
@@ -163,6 +163,12 @@ JWT_SECRET=replace_with_a_long_random_secret
 ```
 
 Do not upload the real `.env` file. It should contain private database details and the JWT secret.
+
+| Variable | Purpose |
+| :--- | :--- |
+| `PORT` | Backend server port |
+| `MONGODB_URI` | MongoDB Atlas connection string |
+| `JWT_SECRET` | Secret key used to sign JWT tokens |
 
 ## How to Run the Backend
 
@@ -200,41 +206,24 @@ The frontend uses Vite proxy settings to send `/api` requests to the backend.
 
 ## API Overview
 
-### Authentication
-
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| POST | `/api/auth/register` | Register a new user |
-| POST | `/api/auth/login` | Login and receive a JWT |
-| GET | `/api/auth/me` | Get the logged-in user |
-
-### Decks
-
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| GET | `/api/decks` | Get the user's decks |
-| POST | `/api/decks` | Create a new deck |
-| GET | `/api/decks/:id` | Get one deck |
-| PUT | `/api/decks/:id` | Update a deck |
-| DELETE | `/api/decks/:id` | Delete a deck |
-
-### Flashcards
-
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| GET | `/api/flashcards` | Get flashcards |
-| POST | `/api/flashcards` | Create a flashcard |
-| GET | `/api/flashcards/:id` | Get one flashcard |
-| PUT | `/api/flashcards/:id` | Update a flashcard |
-| DELETE | `/api/flashcards/:id` | Delete a flashcard |
-
-### Learning History
-
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| POST | `/api/history` | Record a learning action |
-| GET | `/api/history/me` | Get the logged-in user's history |
-| GET | `/api/history/admin` | Admin only: get all users' history |
+| Area | Method | Endpoint | Description |
+| :--- | :--- | :--- | :--- |
+| Authentication | POST | `/api/auth/register` | Register a new user |
+| Authentication | POST | `/api/auth/login` | Login and receive a JWT |
+| Authentication | GET | `/api/auth/me` | Get the logged-in user |
+| Decks | GET | `/api/decks` | Get the user's decks |
+| Decks | POST | `/api/decks` | Create a new deck |
+| Decks | GET | `/api/decks/:id` | Get one deck |
+| Decks | PUT | `/api/decks/:id` | Update a deck |
+| Decks | DELETE | `/api/decks/:id` | Delete a deck |
+| Flashcards | GET | `/api/flashcards` | Get flashcards |
+| Flashcards | POST | `/api/flashcards` | Create a flashcard |
+| Flashcards | GET | `/api/flashcards/:id` | Get one flashcard |
+| Flashcards | PUT | `/api/flashcards/:id` | Update a flashcard |
+| Flashcards | DELETE | `/api/flashcards/:id` | Delete a flashcard |
+| Learning History | POST | `/api/history` | Record a learning action |
+| Learning History | GET | `/api/history/me` | Get the logged-in user's history |
+| Learning History | GET | `/api/history/admin` | Admin only: get all users' history |
 
 ## Security Notes
 
@@ -250,11 +239,23 @@ The frontend uses Vite proxy settings to send `/api` requests to the backend.
 
 ## Workload Allocation
 
-| Member | Main Work |
-| --- | --- |
-| Member 1 | Backend authentication, User model, JWT, password hashing, and security middleware |
-| Member 2 | Deck and flashcard CRUD, database relationships, ownership checks, and API integration |
-| Member 3 | Frontend UI, dashboard, learning history UI, admin panel, responsive design, and README |
+This assignment was completed individually.
+
+| Student Name | Student ID | Responsibility |
+|---|---|---|
+| Yu Xue | 25937133 | Designed, implemented, tested, and documented the complete Flashcard Learning App. |
+
+| Area | Work Completed |
+|---|---|
+| Project planning | Chose the Flashcard Learning App topic and designed the main workflow, including registration, deck management, flashcard study, learning history, and admin review. |
+| Frontend development | Built the React + Vite single-page application, including login/register pages, dashboard, deck page, flashcard page, learning history page, admin panel, navigation layout, responsive UI, loading states, error messages, and polished styling. |
+| Backend development | Built the Node.js + Express backend API, including authentication routes, deck routes, flashcard routes, learning history routes, middleware, and server configuration. |
+| Database design | Designed and implemented MongoDB/Mongoose models for User, Deck, Flashcard, and LearningHistory, including relationships between users, decks, flashcards, and study records. |
+| Authentication and security | Implemented password hashing with bcryptjs, JWT-based authentication, protected routes, admin-only access control, .env usage, and .gitignore protection for sensitive files. |
+| CRUD functionality | Implemented and tested CRUD operations for decks and flashcards, including ownership checks so normal users can only manage their own data. |
+| Learning history and admin feature | Implemented history recording when users reveal flashcard answers, user history display, and admin viewing of all users' learning history. |
+| Testing and debugging | Tested user registration, login, deck CRUD, flashcard CRUD, search, answer reveal, learning history, admin panel, and GitHub submission setup. |
+| Documentation and submission | Wrote the README file, database export file, setup instructions, API overview, security notes, demo flow, and GitHub repository preparation. |
 
 ## Demo Flow
 
