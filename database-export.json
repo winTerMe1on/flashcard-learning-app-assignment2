@@ -1,0 +1,81 @@
+{
+  "project": "Flashcard Learning App",
+  "database": "MongoDB Atlas",
+  "description": "This file provides a sample database export for the Flashcard Learning App flashcard learning platform. The real database is hosted on MongoDB Atlas. Sensitive connection information is not included.",
+  "collections": {
+    "users": [
+      {
+        "_id": "sample_user_id_001",
+        "name": "Sean",
+        "email": "seantesting521@gmail.com",
+        "password": "hashed_password_stored_by_bcryptjs",
+        "role": "user",
+        "createdAt": "2026-05-21T00:00:00.000Z",
+        "updatedAt": "2026-05-21T00:00:00.000Z"
+      },
+      {
+        "_id": "sample_admin_id_001",
+        "name": "Admin",
+        "email": "admin@test.com",
+        "password": "hashed_password_stored_by_bcryptjs",
+        "role": "admin",
+        "createdAt": "2026-05-21T00:00:00.000Z",
+        "updatedAt": "2026-05-21T00:00:00.000Z"
+      }
+    ],
+    "decks": [
+      {
+        "_id": "sample_deck_id_001",
+        "title": "React Basics",
+        "description": "Flashcards for reviewing React fundamentals",
+        "owner": "sample_user_id_001",
+        "createdAt": "2026-05-21T00:00:00.000Z",
+        "updatedAt": "2026-05-21T00:00:00.000Z"
+      }
+    ],
+    "flashcards": [
+      {
+        "_id": "sample_flashcard_id_001",
+        "question": "What is React?",
+        "answer": "React is a JavaScript library for building user interfaces.",
+        "difficulty": "easy",
+        "owner": "sample_user_id_001",
+        "deck": "sample_deck_id_001",
+        "createdAt": "2026-05-21T00:00:00.000Z",
+        "updatedAt": "2026-05-21T00:00:00.000Z"
+      },
+      {
+        "_id": "sample_flashcard_id_002",
+        "question": "What are props in React?",
+        "answer": "Props are values passed from a parent component to a child component.",
+        "difficulty": "medium",
+        "owner": "sample_user_id_001",
+        "deck": "sample_deck_id_001",
+        "createdAt": "2026-05-21T00:00:00.000Z",
+        "updatedAt": "2026-05-21T00:00:00.000Z"
+      },
+      {
+        "_id": "sample_flashcard_id_003",
+        "question": "What is useState?",
+        "answer": "useState is a React Hook that lets a component store and update state.",
+        "difficulty": "easy",
+        "owner": "sample_user_id_001",
+        "deck": "sample_deck_id_001",
+        "createdAt": "2026-05-21T00:00:00.000Z",
+        "updatedAt": "2026-05-21T00:00:00.000Z"
+      }
+    ],
+    "learninghistories": [
+      {
+        "_id": "sample_history_id_001",
+        "user": "sample_user_id_001",
+        "flashcard": "sample_flashcard_id_001",
+        "deck": "sample_deck_id_001",
+        "action": "revealed_answer",
+        "viewedAt": "2026-05-21T00:00:00.000Z",
+        "createdAt": "2026-05-21T00:00:00.000Z",
+        "updatedAt": "2026-05-21T00:00:00.000Z"
+      }
+    ]
+  }
+}
